@@ -74,5 +74,3 @@ class SpeechEmotion:
         for i in range(5):
             self.gui.speechProb[i].set(str(int(updated[i]))+"%")
         return updated
-
-		

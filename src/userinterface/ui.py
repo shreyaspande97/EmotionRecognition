@@ -32,7 +32,6 @@ class GUI(Frame):
         master.protocol('WM_DELETE_WINDOW', self.exit_procedure)
 
     def exit_procedure(self):
-        self.recorder.delete()
         self.quit()
 
     def startRecording(self):
@@ -61,6 +60,7 @@ class GUI(Frame):
         print()
 
     def integrate(self):
+        self.recorder.delete(self.wavfile)
         print("\nIntegration")
         face_acq = 100
         speech_acq = 50
